@@ -22,7 +22,7 @@
 // }
 
 // app/page.tsx
-export default async function TesFetch() {
+export default async function Tes() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/data`, {
     cache: "no-store",
   });
