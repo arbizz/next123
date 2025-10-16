@@ -33,14 +33,17 @@ export default async function Tes() {
     throw new Error("Gagal fetch data dari backend");
   }
 
-  const data: { items: string[] } = await res.json();
+  // backend mengirim array langsung, bukan object dengan 'items'
+  const data: { id: number; name: string }[] = await res.json();
 
   return (
     <div>
       <h1>Data dari Go Backend</h1>
       <ul>
-        {data.items.map((item, i) => (
-          <li key={i}>{item}</li>
+        {data.map((item) => (
+          <li key={item.id}>
+            {item.id}. {item.name}
+          </li>
         ))}
       </ul>
     </div>
