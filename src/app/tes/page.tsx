@@ -23,7 +23,9 @@
 
 // app/page.tsx
 export default async function Tes() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/data`, {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://env-6771182.jh-beon.cloud";
+
+  const res = await fetch(`${API_URL}/api/data`, {
     cache: "no-store",
   });
 
