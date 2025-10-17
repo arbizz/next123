@@ -20,6 +20,7 @@
 //     </div>
 //   );
 // }
+import Image from "next/image";
 
 // app/page.tsx
 export default async function Tes() {
@@ -46,6 +47,8 @@ export default async function Tes() {
           </li>
         ))}
       </ul>
+
+      <Image src="remote-data/fotobgmerah.jpg" alt="foto" width={120} height={20}></Image>
     </div>
   );
 }
